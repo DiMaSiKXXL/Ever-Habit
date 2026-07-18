@@ -2,40 +2,40 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/Ever-Habit/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EverHabit</title>
-    <script type="module" crossorigin src="/Ever-Habit/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/Ever-Habit/index.css">
+    <script type="module" crossorigin src="index.js"></script>
+    <link rel="stylesheet" crossorigin href="index.css">
   </head>
   <body>
     <div class="wrapper" data-theme="light">
-      <div id="close-habit-dialog-one" class="modal-overlay">
+      <div id="create-habit-modal" class="modal-overlay">
         <form class="create-habit-dialog">
           <input type="text" name="habit-name" id="habit-name" placeholder="Habit name" class="create-habit-dialog__input">
           <input type="text" name="habit-description" id="habit-description" placeholder="Short description" class="create-habit-dialog__input">
           <div class="create-habit-dialog__btn-area">
-            <button type="reset" id="create-habit-reset" class="btn">Cancel</button>
-            <button type="submit" id="create-habit-create" class="btn">Create</button>
+            <button type="reset" id="cancel-habit-btn" class="btn">Cancel</button>
+            <button type="submit" id="submit-habit-btn" class="btn">Create</button>
           </div>
         </form>
       </div>
-      <div id="close-habit-dialog-two" class="modal-overlay">
+      <div id="create-habit-confirm-modal" class="modal-overlay">
         <form class="close-habit-dialog">
           <span class="close-habit-dialog__text">Are you sure you want to cancel the habit creation?</span>
           <div class="close-habit-dialog__btn-area">
-            <button type="reset" id="close-habit-reset" class="btn">Cancel</button>
-            <button type="submit" id="close-habit-submit" class="btn">Confirm</button>
+            <button type="reset" id="confirm-cancel-btn" class="btn">Cancel</button>
+            <button type="submit" id="abort-cancel-btn" class="btn">Confirm</button>
           </div>
         </form>
       </div>
-      <div id="delete-habit-dialog" class="modal-overlay">
+      <div id="delete-habit-modal" class="modal-overlay">
         <form class="close-habit-dialog">
           <p class="close-habit-dialog__text">Are you sure you want to permanently remove the habit?</p>
           <p class="close-habit-dialog__text">It will be impossible to cancel this action.</p>
           <div class="close-habit-dialog__btn-area">
-            <button type="reset" id="delete-habit-reset" class="btn">Cancel</button>
-            <button type="submit" id="delete-habit-submit" class="btn">Delete</button>
+            <button type="reset" id="abort-delete-btn" class="btn">Cancel</button>
+            <button type="submit" id="confirm-delete-btn" class="btn">Delete</button>
           </div>
         </form>
       </div>
@@ -45,9 +45,9 @@
           <nav class="nav">
             <ul class="nav__menu">
               <li class="nav__item item">
-                <button type="button" class="create-habit-btn btn tooltip">
+                <button type="button" class="open-create-habit-btn btn tooltip">
                   <svg class="btn__mark">
-                    <use href="/Ever-Habit/sprite.svg#plus"></use>
+                    <use href="sprite.svg#plus"></use>
                   </svg>
                   <span class="tooltiptext">Add a habit</span>
                 </button>
@@ -55,7 +55,7 @@
               <li class="nav__item item">
                 <button type="button" id="theme-switch" class="theme-btn btn tooltip">
                   <svg class="btn__mark">
-                    <use href="/Ever-Habit/sprite.svg#moon"></use>
+                    <use href="sprite.svg#moon"></use>
                   </svg>
                   <span class="tooltiptext">Change theme</span>
                 </button>
